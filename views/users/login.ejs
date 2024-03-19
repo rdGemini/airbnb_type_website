@@ -1,0 +1,31 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<style>
+    @media (max-width:412px){
+
+.mobile-fit{
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0;
+}
+}
+</style>
+
+<body>
+    <div class="row ">
+        <div class="col-6 offset-3 mt-3 mobile-fit">  
+            <h1>Login on Wanderlust</h1>
+            <Form method="post" action="/login" novalidate class="needs-validation">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input name="username" id="username" type="text" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input name="password" id="username" type="password" class="form-control" required>
+                </div>
+                <button class="btn btn-success">Login</button>
+            </Form>
+        </div>
+    </div>
+</body>
